@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+        :root{
+            --White: hsl(0, 0%, 100%);
+            --light: hsl(212, 45%, 89%);
+            --Grayish-blue: hsl(220, 15%, 55%);
+            --Dark-blue: hsl(218, 44%, 22%);
+        }
+        body{
+            background-color: var(--light);
+            display: flex;
+            margin:1.25rem;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height:calc(100vh - 1px);
+            font-family:'Outfit', sans-serif;
+            font-size: 15px;
+            
+
+
+        }
+        #container{
+            background-color:var(--White);
+            border-radius: 15px;
+            padding:20px;
+            margin-top: 2rem;
+            box-shadow: 0px 15px 25px rgba(0,0,0,0.1); 
+
+        }
+        #qr_img{
+            width:100%;
+            border-radius: 15px;
+        }
+        #text{
+            text-align: center;
+            justify-content: center; 
+            line-height: 35px;
+
+        }
+        #text h1{
+            color:var(--Dark-blue);
+            font-weight: 700;
+            
+            
+        }
+        #text p{
+            color:var(--Grayish-blue);
+            font-weight: 400;
+            line-height: 25px;
+  
+        }
+
+
+        #attribution{
+            margin-top: 30px;
+            font-size: 11px;
+            text-align: center;
+            
+        }
+        @media(min-width:500px){
+            #container{
+                width:350px;
+                }
+        }
+            
+
+            
+         
+
+    </style>
+</head>
+<body>
+    <div id="container" >
+        <img id="qr_img" src="./image-qr-code.png">
+        <div id="text">
+            <h1>Improve your front-end <br>skills by building projects
+            </h1>
+            <p>Scan the QR code to visit Frontend<br> Mentor and take your coding skills to<br> the next level</p>
+
+        </div>
+    </div>
+    <div id="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+        . Coded by
+        <a href="#">Deepika.K</a>
+
+    </div>
+</body>
+</html>
+

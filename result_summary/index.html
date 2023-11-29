@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result_summary</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Outfit:wght@400;700&display=swap');
+
+        :root{
+            --Light-red: hsl(0, 100%, 67%);
+            --Orangey-yellow: hsl(39, 100%, 56%);
+            --Green-teal: hsl(166, 100%, 37%);
+            --Cobalt-blue: hsl(234, 85%, 45%);
+
+            --Light-slate-blue: hsl(252, 100%, 67%);
+            --Light-royal-blue: hsl(241, 81%, 54%);
+
+            --Violet-blue: hsla(256, 72%, 46%, 1);
+            --Persian-blue: hsla(241, 72%, 46%, 0);
+
+            --White: hsl(0, 0%, 100%);
+            --Pale-blue: hsl(221, 100%, 96%);
+        }
+
+        body{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            height:calc(100vh - 1px);
+            font-family: 'Hanken Grotesk', sans-serif;
+        }
+
+        .container{
+            width:560px;
+            height: 400px;
+            border-radius: 2rem;
+            box-shadow: 0.5rem 1rem 3rem  var(--Pale-blue);
+            display: flex;
+            align-items: center;
+            flex-direction: row;  
+            
+        }
+        .result{
+            color:var(--White);
+            color: lavender;
+            background-image:linear-gradient(to bottom,var(--Light-slate-blue),var(--Light-royal-blue)) ;
+            border-radius: 2rem;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            width:50%;
+            height: 100%;
+            margin-right:0 ;
+            
+        }
+        .circle{
+            background-image: linear-gradient(var(--Violet-blue),var(--Persian-blue));
+            width: 150px;
+            height:150px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+
+        }
+        .result .circle h1{
+            margin-top: 0%;
+            color:white;
+            font-size: 3rem;
+            margin-bottom: 0%;
+
+
+        }
+        .result .circle p{
+            color:lavender;
+            
+        }
+        .result p h2{
+            margin-top: 0%;
+            margin-bottom: 0%;
+        }
+
+        .result p{
+            color:lavender;
+            margin-top: 0%;
+            margin-bottom: 0%;
+            padding-left: 20px;
+            padding-right: 20px;
+
+        }
+        .summary{
+            
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .summary ul{
+            list-style: none;
+            font-size: 15px;
+            padding: 25px;
+            
+            
+        }
+        .summary ul li{
+            width: 220px; 
+            margin-top: 15px;
+            font-weight: 700;
+            border-radius: 10px;
+            padding-top:12px;
+            padding-bottom: 12px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+  
+        }
+        
+        .reaction{
+            background-color:hsl(0, 100%, 67%,0.05);
+            color:var(--Light-red);
+        
+
+        }
+        .score{
+            text-align: right;
+            color:lightslategray;
+            padding-right: 10px;
+        }
+        
+        
+        .memory{
+            background-color:hsl(39, 100%, 56%,0.05);
+            color:var(--Orangey-yellow);
+
+        }
+        .verbal{
+            background-color:hsl(166, 100%, 37%,0.05); 
+            color:var(--Green-teal);
+
+        }
+        .visual{
+            background-color:hsl(234, 85%, 45%,0.05);
+            color:var(--Cobalt-blue);
+
+        }
+        object{
+            vertical-align: bottom;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        
+        .summary button{
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-size: 18px;
+            width: 220px;
+            margin-top: 25px;
+            height: 35px;
+            border:none;
+            border-radius: 25px;
+            background-color: hsla(242, 88%, 13%, 0.8);
+            color: var(--White);
+            
+        }
+
+        @media screen and (max-width:400px){
+            .body{
+                align-items: flex-start;
+            }
+            .result{
+                width:100%;
+            }
+            .container{
+                width:450px;
+                height:900px;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                box-shadow: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="result">
+            <h3>Your Result</h3>
+            <div class="circle">
+                <p><h1>76</h1>0f 100</p>
+            </div>
+            <h2>Great</h2>
+            <p>You scored higher than 65% of the people who have taken these tests.</p>
+        </div>
+        <div class="summary">
+            
+            <ul>
+                <h3 style="color:hsla(242, 88%, 13%, 0.8);">Summary</h3>
+                <li class='reaction'>
+                    <div class="item">
+                        <object data="./icon-reaction.svg"></object>
+                        Reaction</div>
+                    <div class="score">
+                        <b style="color: hsla(242, 88%, 13%, 0.8);">80</b> / 100</div>
+                </li>
+                <li class='memory'>
+                    <div class="item">
+                        <object data="./icon-memory.svg"></object>
+                        Memory</div>
+                    <div class="score">
+                        <b style="color: hsla(242, 88%, 13%, 0.8);">92</b> / 100</div>
+                </li>
+                <li class='verbal'>
+                    <div class="item">
+                        <object data="./icon-verbal.svg"></object>
+                        Verbal</div>
+                    <div class="score">
+                        <b style="color: hsla(242, 88%, 13%, 0.8);">61</b> / 100</div>
+                </li>
+                <li class='visual'>
+                    <div class="item">
+                        <object data="./icon-verbal.svg"></object>
+                        Visual</div>
+                    <div class="score">
+                        <b style="color: hsla(242, 88%, 13%, 0.8);">72</b> / 100</div>
+                </li>
+                <button id='btn'onclick="change()">Continue</button>
+            </ul>
+            
+        </div>
+    </div>
+    <script>
+        function change(){
+            let e = 
+            document.getElementById('btn').style.background= 'linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%))';
+        }
+    </script>
+    
+</body>
+</html>

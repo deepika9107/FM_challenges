@@ -1,4 +1,5 @@
 e-commerce product page
+![screenshot_img](https://github.com/deepika9107/FM_challenges/assets/61866423/8d9eb337-cfb2-4465-81f1-b21e80ac058f)
 
 users can be able to:
 

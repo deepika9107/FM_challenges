@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet"  href="css/style.css">
+</head>
+<body>
+    <div class="overlay hidden">
+    <div class="model-product-image">
+        <div class="model-product-slider">
+            <div class="arrows-model" >
+                <button class="first_arr"  onclick="plusDive(-1)"><img src="images/icon-previous.svg" alt=""></button>
+                <button class="second_arr" onclick="plusDive(1)"><img src="images/icon-next.svg" alt=""></button>
+            </div>
+            <i id="model-closeBtn" class="fas fa-close"></i>
+            <div class="model-product-slider slide" style="background: url(images/image-product-1.jpg);"></div>
+            <div class="model-product-slider slide" style="background: url(images/image-product-2.jpg); display: none;"></div>
+            <div class="model-product-slider slide" style="background: url(images/image-product-3.jpg); display: none;"></div>
+            <div class="model-product-slider slide" style="background: url(images/image-product-4.jpg); display: none;"></div>
+            
+        </div>
+
+        <div class="model-thumbnail-slider">
+            <div class="model-thumbnail-slider slide" onclick="currentDiv(1)" style="background: url(images/image-product-1-thumbnail.jpg);"></div>
+            <div class="model-thumbnail-slider slide" onclick="currentDiv(2)" style="background: url(images/image-product-2-thumbnail.jpg);"></div>
+            <div class="model-thumbnail-slider slide" onclick="currentDiv(3)" style="background: url(images/image-product-3-thumbnail.jpg);"></div>
+            <div class="model-thumbnail-slider slide" onclick="currentDiv(4)" style="background: url(images/image-product-4-thumbnail.jpg);"></div>
+        </div>
+    </div>
+</div>
+    
+
+    <div class="cart hidden" >
+        <h3>Cart</h3>
+        <label id="label" style="display: block">Your cart is empty</label>
+        <div class="cart-item hidden"  >
+            <div class="cart-content">
+                <img src="images/image-product-1-thumbnail.jpg" alt="">
+                <p>Fall Limited Edition Sneakers
+                    <label id="cost">$125.00</label>
+                </p>
+                <img id="delete" src='images/icon-delete.svg'></img>
+            </div>
+            <button>Checkout</button>
+        </div>
+    </div>
+        
+    </div>
+    <header class="header">
+        <h1><a id="menuBtn" class="fas fa-bars"></a>sneakers</h1>
+        <nav class="navBar">
+            <i id="closeBtn" class="fas fa-close"></i>
+            <a href="#collections">Collections</a>
+            <a href="#men">Men</a>
+            <a href="#women">Women</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <icons class="icons">
+            <div class="item-num hidden">0</div>
+           <div id="shoppingCart" class="fas fa-shopping-cart"></div>
+           <div class="user_pic" ><img src="images/image-avatar.png" alt=""></div>
+        </icons>
+        
+    </header>
+    
+
+    
+    
+
+    <section class="product">
+        <div class="product-image">
+            <div class="product-slider">
+                <div class="arrows" >
+                    <button class="first_arr" onclick="plusDive(-1)"><img src="images/icon-previous.svg" alt=""></button>
+                    <button class="second_arr" onclick="plusDive(1)" ><img src="images/icon-next.svg" alt=""></button>
+                </div>
+                <div class="product-slider slide" style="background: url(images/image-product-1.jpg);"></div>
+                <div class="product-slider slide" style="background: url(images/image-product-2.jpg); display: none;"></div>
+                <div class="product-slider slide" style="background: url(images/image-product-3.jpg); display: none;"></div>
+                <div class="product-slider slide" style="background: url(images/image-product-4.jpg); display: none;"></div>
+                
+            </div>
+
+            <div class="thumbnail-slider">
+                <div class="thumbnail-slider slide" onclick="currentDiv(1)" style="background: url(images/image-product-1-thumbnail.jpg);"></div>
+                <div class="thumbnail-slider slide" onclick="currentDiv(2)" style="background: url(images/image-product-2-thumbnail.jpg);"></div>
+                <div class="thumbnail-slider slide" onclick="currentDiv(3)" style="background: url(images/image-product-3-thumbnail.jpg);"></div>
+                <div class="thumbnail-slider slide" onclick="currentDiv(4)" style="background: url(images/image-product-4-thumbnail.jpg);"></div>
+            </div>
+
+            
+    
+            
+        </div>
+        
+        
+
+        <div class="product-info">
+            <span class="info">
+                <p class="company"><b>SNEAKER COMPANY</b></p>
+                <h1 class="title">Fall Limited Edition Sneakers</h1>
+                <p class="content">These low-profile sneakers are your perfect casual wear companion. Featuring a durable outer rubber sole, they'll withstand everything the weather can offer.</p>
+                <p class="price">$125.00 <small>50%</small></p>
+                <p><s>$250</s></p>
+            </span>
+            <div class="buttons">
+            <div class="item-count">
+                    <button id="decrease"><img src="images/icon-minus.svg"><button>
+                    <label id="items" >0</label>
+                    <button id="increase" ><img src="images/icon-plus.svg"></button>
+                </div>
+                <button id="add" class="add"><object data="images/icon-cart.svg"></object>Add to cart</button>
+            </div>
+        </div>   
+
+        
+
+    </section>
+
+    <script src="index.js"></script>
+    
+</body>
+</html>

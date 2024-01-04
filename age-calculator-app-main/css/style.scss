@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+$Purple: hsl(259, 100%, 65%);
+$Light-red: hsl(0, 100%, 67%);
+$White: hsl(0, 0%, 100%);
+$Off-white: hsl(0, 0%, 94%);
+$Light-grey: hsla(0, 0%, 86%, 0.8);
+$Smokey-grey: hsl(0, 1%, 44%);
+$Off-black: hsl(0, 0%, 8%);
+
+.active {
+  display: inline-block;
+  animation: move 2s;
+  text-transform: uppercase;
+  animation-delay: calc(0.2s * var(--i));
+}
+@keyframes move {
+  0%,
+  50% {
+    transform: rotateY(360deg);
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 48px;
+  height: calc(100vh - 1px);
+  background-color: $Light-grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: $White;
+  width: 380px;
+  border-radius: 10px;
+  border-bottom-right-radius: 100px;
+  padding: 25px;
+
+  form {
+    font-size: small;
+    display: flex;
+
+    .data-info {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      position: relative;
+      label {
+        font-size: x-small;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: $Off-black;
+        margin-right: 10px;
+      }
+
+      input {
+        text-decoration: none;
+        width: 80px;
+        padding: 8px;
+        font-weight: 800;
+        border: 1px $Off-white solid;
+        border-radius: 3px;
+        margin-right: 10px;
+        outline: none;
+        &:focus {
+          border: 1px solid $Light-red;
+        }
+      }
+      span {
+        position: absolute;
+        font-style: italic;
+        top: 100%;
+        color: $Light-red;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: xx-small;
+        padding-top: 4px;
+        padding-left: 4px;
+      }
+    }
+  }
+  .button-container {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    hr {
+      margin: 0;
+      width: 100%;
+      height: 0;
+      border: 1px $Off-white solid;
+    }
+    .submitBtn {
+      float: right;
+      background-color: $Purple;
+      height: 45px;
+      width: 50px;
+      border: none;
+      border-radius: 50%;
+
+      &:hover {
+        background-color: $Off-black;
+        svg g {
+          fill: $Off-black;
+        }
+      }
+    }
+  }
+
+  .age-info {
+    div {
+      line-height: 55px;
+      font-weight: 800;
+      font-style: italic;
+      span {
+        color: $Purple;
+        font-weight: inherit;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 38px;
+  }
+  .container {
+    width: 220px;
+
+    form {
+      .data-info {
+        input {
+          width: 50px;
+        }
+      }
+    }
+    .button-container {
+      position: relative;
+      justify-content: center;
+      margin-bottom: 45px;
+      .submitBtn {
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        float: none;
+      }
+    }
+  }
+}

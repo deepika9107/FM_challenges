@@ -1,5 +1,8 @@
 # Frontend Mentor - Age calculator app solution
 
+![Screenshot (140)](https://github.com/deepika9107/FM_challenges/assets/61866423/b52e3c0b-3673-43c1-b097-e4d00fbf6ad3)
+
+
 This is a solution to the [Age calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q).
 
 ### The challenge

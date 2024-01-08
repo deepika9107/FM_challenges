@@ -1,6 +1,7 @@
 _**e-commerce product page**_
 
-![screenshot_img](https://github.com/deepika9107/FM_challenges/assets/61866423/8d9eb337-cfb2-4465-81f1-b21e80ac058f)
+![Screenshot (144)](https://github.com/deepika9107/FM_challenges/assets/61866423/7e1891e6-401d-45e3-b0b1-2d3079ab6ec2)
+
 
 _users can be able to:_
 

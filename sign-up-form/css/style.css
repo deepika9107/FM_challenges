@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.error {
+  background-image: url(icon-error.svg);
+  background-size: 25px 25px;
+}
+
+body {
+  background-color: hsl(0, 100%, 74%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 1px);
+}
+
+.container {
+  display: flex;
+  margin: 15px;
+}
+.container .info {
+  align-self: center;
+  justify-content: left;
+  width: 500px;
+  color: white;
+  box-sizing: border-box;
+}
+.container .info h1 {
+  font-weight: 700;
+}
+.container .info p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.container .form_cont {
+  box-sizing: border-box;
+  justify-content: center;
+}
+.container .form_cont #trial {
+  text-align: center;
+  font-weight: 400;
+  background-color: hsl(248, 32%, 49%);
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 14px;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.1);
+}
+.container .form_cont form {
+  background-color: white;
+  padding: 35px;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.container .form_cont form small {
+  align-self: self-end;
+  display: none;
+  font-weight: 100;
+  font-size: 12px;
+  color: hsl(0, 100%, 74%);
+  font-style: italic;
+  padding-top: 0px;
+  margin-bottom: 20px;
+}
+.container .form_cont form img {
+  float: right;
+}
+.container .form_cont form input {
+  margin-bottom: 20px;
+  width: 350px;
+  height: 15px;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 15px;
+  border-style: solid;
+  border-color: hsl(246, 25%, 77%);
+}
+.container .form_cont form input:focus {
+  outline: none;
+  border-color: hsl(248, 32%, 49%);
+}
+.container .form_cont form button {
+  width: 383px;
+  height: 45px;
+  font-weight: 500;
+  border-radius: 5px;
+  background-color: hsl(154, 59%, 51%);
+  color: white;
+  border: none;
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.1);
+}
+.container .form_cont form button:hover {
+  cursor: pointer;
+  filter: brightness(115%);
+}
+.container .form_cont form #TC {
+  text-align: center;
+  font-weight: 500;
+  color: hsl(246, 25%, 77%);
+  font-size: 10px;
+}
+.container .form_cont form #TC b {
+  color: hsl(0, 100%, 74%);
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    place-items: center;
+  }
+  .container .info {
+    width: auto;
+    text-align: center;
+    padding: 0;
+    margin-top: 50px;
+  }
+  .container .form_cont {
+    width: 100%;
+  }
+  .container .form_cont form input {
+    width: 100%;
+  }
+  .container .form_cont form button {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

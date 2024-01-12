@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    input{
+    background-image: none;
+    background-size: 25px 25px;
+    background-position: right center;
+    background-position-x: 95%;
+    background-repeat: no-repeat;
+
+    }
+  </style>
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+</head>
+<body style="background-image: url('./images/bg-intro-desktop.png');">
+  <div class="container">
+  <div class="info">
+    
+      <h1>Learn to code by<br>watching others</h1>
+      <p> 
+      See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+      but understanding how developers think is invaluable. 
+    </p>
+  </div>
+ 
+  <div class="form_cont">
+    <p id="trial"><b>Try it free 7 days</b> then $20/mo. thereafter</p>
+    <form id="myForm">
+ 
+    <input  name="fname" id="fname" value="" type="text" placeholder="First Name">
+    <small id="f" >First Name cannot be empty</small>
+    
+    <input name="lname" id="lname" value="" type="text" placeholder="Last Name" > 
+    <small id="l">Last Name cannot be empty</small> 
+
+    <input id="email" type="email" placeholder="Email Address" required>
+    <small id="e">Email cannot be empty</small> 
+
+    <input id="password" type="password" placeholder="Password">
+    <small id="p">Password cannot be empty</small> 
+
+    <button id="btn" type="submit" >Claim your free trial</button>
+    <p id="TC">By clicking the button, you are agreeing to our <b>Terms and Services</b></p>
+
+    </form>
+   
+
+  
+  </div>
+</div>
+
+<script>
+  document.getElementById('btn').addEventListener('click',(event)=>{
+    
+    const form = document.getElementById("myForm");
+    const formkeys = ['f','l','e','p'];
+    for(let i = 0;i<=3;i++){
+    if( form.elements[i].value === ""){
+      let field = form.elements[i];
+      document.getElementById(formkeys[i]).style.display = 'block';
+      field.style.borderColor = 'red';
+      field.placeholder = "";
+      field.style.margin = '0px';
+      field.style.backgroundImage = 'url(icon-error.svg)'
+      
+    };
+    
+  };
+    
+    
+  });
+
+  
+  
+
+
+
+  
+  
+
+</script>
+
+
+</body>
+</html>

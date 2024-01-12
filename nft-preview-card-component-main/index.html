@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+    *{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Dark-blue-main: hsl(216, 54%, 11%);
+    --Dark-blue-card: hsl(216, 50%, 16%);
+    --Dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    }
+
+    body{
+      background-color: var(--Dark-blue-main);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--Soft-blue);
+      height: calc(100vh - 1px);
+      font-family: 'Outfit', sans-serif;
+      font-weight:300;
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    .card{
+      background-color: var(--Dark-blue-card);
+      width:300px;
+      display: flex;
+      flex-direction: column;
+      padding:25px;
+      border-radius: 15px;
+      box-shadow: 0px 25px 35px  rgba(0,0,0, 0.19),
+      0px 15px 20px rgba(7, 11, 44, 0.23);
+      
+    }
+    .card h3{
+      color: var(--White);
+      font-weight: 600;
+      margin-bottom: 0;
+
+    }
+    h3:hover, .card div p b:hover{
+      color: var(--Cyan);
+      cursor: pointer;
+    }
+    .picture-container{
+      position: relative;
+    }
+    
+    .picture{
+      border-radius: 10px;
+      height:300px;
+      
+      
+    }
+    .filter{
+      display: none;
+      position: absolute;
+      align-self: center;
+      background-color: rgba(0, 255, 255,60%);
+      border-radius: 5px;
+      padding:125px;
+      cursor: pointer;
+      animation: fadeOut ease .5s;
+    }
+    @keyframes fadeOut{
+      0%{
+        opacity: 0.5;
+      }
+      100%{
+        opacity: 1;
+      }
+    }
+
+    .picture-container:hover .filter{
+      display: block;
+    }
+
+    .card span{
+      display: flex;
+      justify-content: space-between;  
+    }
+
+    span div .price{
+      color: var(--Cyan);
+      font-weight: 400;
+
+    }
+    .text-component{
+      display: inline-flex;
+      align-items: center;
+      gap:10px;
+    }
+
+    .card hr{
+      width:100%;
+      border:none;
+      border-top: .5px  solid var(--Dark-blue-line);
+      
+    }
+    .card div p b{
+      color: var(--White);
+      font-weight: 300;
+    }
+
+    .avatar{
+      height: 30px;
+      width:30px;
+      border: 1px var(--White) solid;
+      border-radius:50%;
+
+    }
+  </style>
+
+<body>
+
+  <div class="card">
+
+    <div class="picture-container">
+      <img class="filter" src="images/icon-view.svg" alt="">
+    <img class="picture" src="images/image-equilibrium.jpg" alt="">
+    </div>
+    
+    <h3>Equilibrium #3429</h3>
+   
+    <p>Our Equilibrium collection promotes balance and calm.</p>
+    <span>
+      <div class="text-component"><img src="images/icon-ethereum.svg" alt=""><p class="price">0.041 ETH</p></div>
+      <div class="text-component"><img src="images/icon-clock.svg" alt=""><p>3 days left</p></div>
+    </span>
+
+    <hr>
+
+    <div class="text-component">
+      <img class="avatar" src="images/image-avatar.png" alt="">
+      <p>Creation of <b>Jules Wyvern<b></p>
+    </div>
+  </div>
+  
+
+  
+
+  
+
+ 
+</body>
+</html>

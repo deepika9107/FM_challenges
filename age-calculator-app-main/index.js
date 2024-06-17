@@ -82,6 +82,12 @@ function checkEmpty(){
 
 // checking if the date is valid including leap year
 function checkValid(){
+      // to check if the current date is not in future
+    let user_date = new Date(`${dateInfo[2].value}-${dateInfo[1].value}-${dateInfo[0].value}`);
+    if(!(user_date <= current_date)){
+        dateSpan[0].innerText = 'Must be valid date'
+        return;
+    }
     // checking if user entered month is feburary
     if(dateInfo[1].value == 2){
         if(dateInfo[0].value <= 29){
